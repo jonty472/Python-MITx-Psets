@@ -1,5 +1,3 @@
-from calendar import month
-
 annual_salary = float(input('What is your annual salary: '))
 
 portion_saved = float(input('Enter the percent of your salary to save, as a decimal: '))
