@@ -30,9 +30,17 @@ saving_rate = dp_monthly/monthly_salary
 month_count = 0
 
 
+"""
+write a program to calculate the best savings rate, as a function of your starting salary.
 
+How much should you save each month to achieve this?
 
-x = 12500 #montly salary
+apply annual_raise for the 36 months to begin with then divide 12 to get yearly annual salary for x
+
+apply the banks_intrest in the inside the low and high if statements
+"""
+
+x = annual_salary/12
 epsilon = 0.01
 numGuesses = 0
 low = 0.0
@@ -42,7 +50,7 @@ ans = (high + low)/2.0
 while ans*36 != downpayment:
     #print('low =', low, 'high =', high, 'ans =', ans)
     numGuesses+=1
-
+    
     if ans*36 < downpayment:
         low = ans
     else:
