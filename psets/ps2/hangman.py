@@ -50,6 +50,8 @@ def choose_word(wordlist):
 # so that it can be accessed from anywhere in the program
 wordlist = load_words()
 
+secret_word = 'hi'
+letters_guessed = ['i', 'h', 'd']
 
 def is_word_guessed(secret_word, letters_guessed):
     '''
@@ -60,8 +62,21 @@ def is_word_guessed(secret_word, letters_guessed):
     returns: boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     '''
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
-    pass
+
+    correct_letters = []
+    for letter in letters_guessed:
+        print(letter)
+        if letter in secret_word:
+          correct_letters.append(letter)
+    print(correct_letters)
+    if len(secret_word) == len(correct_letters):
+      return print(True)
+    else:
+      return print(False)
+
+      
+    
+is_word_guessed(secret_word, letters_guessed) 
 
 
 
